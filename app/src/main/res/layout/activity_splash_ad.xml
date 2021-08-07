@@ -15,7 +15,8 @@
         android:layout_height="68dp"
         android:background="#ffffff"
         android:elevation="5dp"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="48dp"

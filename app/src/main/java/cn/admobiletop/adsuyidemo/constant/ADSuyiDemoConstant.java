@@ -16,7 +16,7 @@ public class ADSuyiDemoConstant {
     /**
      * 开屏广告位仅支持的平台
      */
-    public static String SPLASH_AD_ONLY_SUPPORT_PLATFORM = null;
+    public static String SPLASH_AD_ONLY_SUPPORT_PLATFORM = "gdt";
     /**
      * 开屏自定义跳过按钮
      */

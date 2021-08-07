@@ -16,7 +16,7 @@
 
     <style name="splash" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/shape_splash</item>
-        <item name="android:windowFullscreen">true</item>
+<!--        <item name="android:windowFullscreen">true</item>-->
     </style>
 
     <style name="noActionBar" parent="Theme.AppCompat.Light.NoActionBar">
