@@ -13,14 +13,72 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <View
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="550dp" />
+                android:layout_height="150dp"
+                android:text="当前案例以PT为适配单位，避免使用dp的三方库出现异常展示"
+                android:gravity="center"
+                android:layout_marginTop="200dp"/>
 
-            <View
+            <TextView
+                android:layout_width="360dp"
+                android:layout_height="150dp"
+                android:text="360dp"
+                android:gravity="center"
+                android:background="@color/white"/>
+
+            <TextView
+                android:layout_width="360pt"
+                android:layout_height="150dp"
+                android:gravity="center"
+                android:background="@color/white"
+                android:text="360pt"/>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="550dp"
-                android:background="#b0cce5" />
+                android:layout_height="150pt"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100pt"
+                    android:layout_height="match_parent"
+                    android:background="#b0cce5"
+                    android:text="100pt"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="240pt"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="#FF0156"
+                    android:text="240pt"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/space_10dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="#b0cce5"
+                    android:text="100dp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="260dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:background="#FF0156"
+                    android:text="260dp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
 
             <View
                 android:layout_width="match_parent"

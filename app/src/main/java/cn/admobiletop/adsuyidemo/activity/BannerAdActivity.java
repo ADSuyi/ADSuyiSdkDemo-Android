@@ -15,6 +15,7 @@ import cn.admobiletop.adsuyi.ad.listener.ADSuyiBannerAdListener;
 import cn.admobiletop.adsuyi.util.ADSuyiToastUtil;
 import cn.admobiletop.adsuyidemo.R;
 import cn.admobiletop.adsuyidemo.constant.ADSuyiDemoConstant;
+import me.jessyan.autosize.internal.CancelAdapt;
 
 /**
  * @author ciba

@@ -14,6 +14,8 @@ import cn.admobiletop.adsuyi.ADSuyiSdk;
 import cn.admobiletop.adsuyi.config.ADSuyiInitConfig;
 import cn.admobiletop.adsuyidemo.activity.SplashAdActivity;
 import cn.admobiletop.adsuyidemo.constant.ADSuyiDemoConstant;
+import me.jessyan.autosize.AutoSizeConfig;
+import me.jessyan.autosize.unit.Subunits;
 
 /**
  * @author ciba
@@ -39,6 +41,11 @@ public class ADSuyiApplication extends Application {
     public void onCreate() {
         super.onCreate();
         context = this;
+
+        AutoSizeConfig.getInstance().getUnitsManager()
+                .setSupportDP(false)
+                .setSupportSP(false)
+                .setSupportSubunits(Subunits.PT);
         // 添加bugly初始化（该初始化与广告SDK无关，广告SDK中不包含bugly相关内容，仅供Demo错误信息收集使用）
         CrashReport.initCrashReport(getApplicationContext(), "6d9d9f24ee", true);
 

@@ -73,6 +73,8 @@ dependencies {
     implementation 'com.tencent.bugly:crashreport:3.2.3'
     implementation 'com.tencent.bugly:nativecrashreport:3.7.3'
 
+    implementation 'me.jessyan:autosize:1.2.1'
+
     // support支持库，如果是AndroidX请使用对应的支持库
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:support-v4:28.0.0'
@@ -98,39 +100,39 @@ dependencies {
     // 头条AdapterSdk，可选的
     implementation 'cn.admobiletop.adsuyi.ad.adapter:toutiao:3.8.0.3.07191'
 
-    // 百度AdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:baidu:5.98.05131'
-
-    // 汇量AdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:mintegral:15.6.07.07192'
-
-    // InmobiAdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:inmobi:7.5.1.11112'
-    implementation 'com.squareup.picasso:picasso:2.5.2'
-
-    // 讯飞AdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:ifly:5.0.2.06011'
-
-    // 快手基础版AdapterSdk，可选的
-//    implementation 'cn.admobiletop.adsuyi.ad.adapter:ksadbase:3.3.11.07171'
-
-    // 快手内容版AdapterSdk，可选的（比快手基础版多一个内容组件，不需要内容组件无需导入该版本，不可和快手基础版同时导入）
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:ksadcontent:3.3.19.1.07171'
-
-    // 米盟AdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:mimo:5.0.6.11263'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
-
-    // 华为广告联盟AdadapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:hwpps:13.4.45.304.07192'
-
-    // 云码AdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:yunma:1.0.3.04211'
-
-    // 爱奇艺AdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:iqy:1.3.11.06181'
+//    // 百度AdapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:baidu:5.98.05131'
+//
+//    // 汇量AdapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:mintegral:15.6.07.07192'
+//
+//    // InmobiAdapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:inmobi:7.5.1.11112'
+//    implementation 'com.squareup.picasso:picasso:2.5.2'
+//
+//    // 讯飞AdapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:ifly:5.0.2.06011'
+//
+//    // 快手基础版AdapterSdk，可选的
+////    implementation 'cn.admobiletop.adsuyi.ad.adapter:ksadbase:3.3.11.07171'
+//
+//    // 快手内容版AdapterSdk，可选的（比快手基础版多一个内容组件，不需要内容组件无需导入该版本，不可和快手基础版同时导入）
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:ksadcontent:3.3.19.1.07171'
+//
+//    // 米盟AdapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:mimo:5.0.6.11263'
+//    implementation 'com.google.code.gson:gson:2.8.5'
+//    implementation 'com.github.bumptech.glide:glide:4.9.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+//
+//    // 华为广告联盟AdadapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:hwpps:13.4.45.304.07192'
+//
+//    // 云码AdapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:yunma:1.0.3.04211'
+//
+//    // 爱奇艺AdapterSdk，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:iqy:1.3.11.06181'
 
     // 小说内容SDK（还需要gson、glide4.9.0和recyclerview支持）
     implementation 'cn.admobiletop.adsuyi.ad.adapter:novel:1.2.8.06112'
