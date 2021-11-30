@@ -25,13 +25,13 @@
                 android:layout_height="150dp"
                 android:text="360dp"
                 android:gravity="center"
-                android:background="@color/white"/>
+                android:background="#fff"/>
 
             <TextView
                 android:layout_width="360pt"
                 android:layout_height="150dp"
                 android:gravity="center"
-                android:background="@color/white"
+                android:background="#fff"
                 android:text="360pt"/>
 
             <LinearLayout
@@ -61,7 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal"
-                android:layout_marginTop="@dimen/space_10dp">
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:layout_width="100dp"
