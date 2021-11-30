@@ -95,8 +95,7 @@ dependencies {
     implementation 'cn.admobiletop.adsuyi.ad.adapter:admobile:5.0.1.10224'
 
     // 广点通AdapterSdk，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:gdt-without:4.422.1292.11021'
-    implementation 'cn.admobiletop.adsuyi.ad.third:gdt:4.430.1300'
+    implementation 'cn.admobiletop.adsuyi.ad.adapter:gdt:4.422.1292.11021'
 
     // 头条AdapterSdk，可选的
     implementation 'cn.admobiletop.adsuyi.ad.adapter:toutiao:4.0.1.9.11021'
