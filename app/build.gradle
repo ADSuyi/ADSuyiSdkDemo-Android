@@ -85,32 +85,32 @@ dependencies {
     // 优量汇（广点通）适配器，可选
     implementation 'cn.admobiletop.adsuyi.ad.adapter:gdt:4.640.1510.05132'
 
-    // 穿山甲（头条）适配器，可选
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:toutiao:6.8.1.7.05132'
-
-    // 百度适配器，可选。仅支持AndroidX版本
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:baidu-androidx:9.391.05141'
-
-    // 快手适配器，可选
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:ksadbase:3.3.76.5.05141'
-
-    // 米盟适配器，可选。仅支持AndroidX版本
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:mimo-androidx:5.3.3.12103'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
-
-    // 华为适配器，可选
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:hwpps:13.4.76.300.01031'
-
-    // 京媒适配器，可选。仅支持AndroidX版本
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:jadyun-androidx:2.6.28.05141'
-
-    // 章鱼适配器，可选的
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:octopus:1.6.3.6.05141'
-
-    // 爱奇艺适配器，可选
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:iqy:1.15.100.53.05141'
+//    // 穿山甲（头条）适配器，可选
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:toutiao:6.8.1.7.05132'
+//
+//    // 百度适配器，可选。仅支持AndroidX版本
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:baidu-androidx:9.391.05141'
+//
+//    // 快手适配器，可选
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:ksadbase:3.3.76.5.05141'
+//
+//    // 米盟适配器，可选。仅支持AndroidX版本
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:mimo-androidx:5.3.3.12103'
+//    implementation 'com.google.code.gson:gson:2.8.5'
+//    implementation 'com.github.bumptech.glide:glide:4.9.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+//
+//    // 华为适配器，可选
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:hwpps:13.4.76.300.01031'
+//
+//    // 京媒适配器，可选。仅支持AndroidX版本
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:jadyun-androidx:2.6.28.05141'
+//
+//    // 章鱼适配器，可选的
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:octopus:1.6.3.6.05141'
+//
+//    // 爱奇艺适配器，可选
+//    implementation 'cn.admobiletop.adsuyi.ad.adapter:iqy:1.15.100.53.05141'
 //
 //    // gromoreAdapterSdk，可选的。如使用gromore的其他渠道，请联系开发者。
 //    // gromore已与穿山甲合并，此处无需重复导入穿山甲。
