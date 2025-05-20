@@ -58,7 +58,7 @@ public class NativeExpressListActivity extends BaseAdActivity implements OnRefre
     }
 
     private void initAd() {
-        int widthPixels = getResources().getDisplayMetrics().widthPixels - ADSuyiDisplayUtil.dp2px(20);
+        int widthPixels = getResources().getDisplayMetrics().widthPixels;
         // 创建信息流广告实例
         adSuyiNativeAd = new ADSuyiNativeAd(this);
 
@@ -173,7 +173,7 @@ public class NativeExpressListActivity extends BaseAdActivity implements OnRefre
         // 信息流广告场景id（场景id非必选字段，如果需要可到开发者后台创建）
         adSuyiNativeAd.setSceneId(ADSuyiDemoConstant.NATIVE_AD_SCENE_ID);
         // 请求广告数据，参数一广告位ID，参数二请求数量[1,3]
-        adSuyiNativeAd.loadAd(ADSuyiDemoConstant.NATIVE_AD_POS_ID1, ADSuyiDemoConstant.NATIVE_AD_COUNT);
+        adSuyiNativeAd.loadAd(ADSuyiDemoConstant.NATIVE_AD_POS_ID4, ADSuyiDemoConstant.NATIVE_AD_COUNT);
     }
 
     /**
