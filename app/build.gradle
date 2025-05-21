@@ -83,7 +83,7 @@ dependencies {
     implementation 'cn.admobiletop.adsuyi.ad.adapter:tianmu:3.0.0.05151'
 
     // 优量汇（广点通）适配器，可选
-    implementation 'cn.admobiletop.adsuyi.ad.adapter:gdt:4.640.1510.05132'
+    implementation 'cn.admobiletop.adsuyi.ad.adapter:gdt:4.640.1510.05133'
 
 //    // 穿山甲（头条）适配器，可选
 //    implementation 'cn.admobiletop.adsuyi.ad.adapter:toutiao:6.8.1.7.05132'
