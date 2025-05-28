@@ -161,9 +161,5 @@
 #京媒 混淆
 -keep class com.jd.ad.sdk.** { *; }
 
-# 章鱼混淆
--dontwarn com.octopus.**
--keep class com.octopus.** {*;}
-
 # 爱奇艺混淆
 -keep class com.mcto.sspsdk.** { *; }

@@ -106,9 +106,6 @@ dependencies {
 //    // 京媒适配器，可选。仅支持AndroidX版本
 //    implementation 'cn.admobiletop.adsuyi.ad.adapter:jadyun-androidx:2.6.28.05141'
 //
-//    // 章鱼适配器，可选的
-//    implementation 'cn.admobiletop.adsuyi.ad.adapter:octopus:1.6.3.6.05141'
-//
 //    // 爱奇艺适配器，可选
 //    implementation 'cn.admobiletop.adsuyi.ad.adapter:iqy:1.15.100.53.05141'
 //
