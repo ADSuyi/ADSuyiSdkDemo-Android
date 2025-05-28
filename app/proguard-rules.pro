@@ -119,26 +119,6 @@
 -dontwarn aegon.chrome.**
 -keepclasseswithmembernames class * { native <methods>;}
 
-# 米盟混淆
--keep class com.miui.zeus.mimo.sdk.* { *; }
--keep class com.miui.analytics.** { *; }
--keep class com.xiaomi.analytics.* { public protected *; }
--keep class * extends android.os.IInterface{*; }
-# gson
--keepattributes Signature
--keepattributes *Annotation*
--dontwarn sun.misc.**
--keep class com.google.gson.examples.android.model.** { <fields>; }
--keep class * implements com.google.gson.TypeAdapterFactory
--keep class * implements com.google.gson.JsonSerializer
--keep class * implements com.google.gson.JsonDeserializer
--keepclassmembers,allowobfuscation class * { @com.google.gson.annotations.SerializedName <fields>; }
-# glide
--keep public class * implements com.bumptech.glide.module.GlideModule
--keep class * extends com.bumptech.glide.module.AppGlideModule { <init>(...);}
--keep public enum com.bumptech.glide.load.ImageHeaderParser$** {**[] $VALUES;public *;}
--keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {*** rewind();}
-
 # 华为广告联盟混淆
 -keep class com.huawei.openalliance.ad.** { *; }
 -dontwarn com.huawei.openalliance.ad.activity.PPSActivity

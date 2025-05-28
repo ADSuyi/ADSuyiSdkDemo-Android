@@ -94,12 +94,6 @@ dependencies {
 //    // 快手适配器，可选
 //    implementation 'cn.admobiletop.adsuyi.ad.adapter:ksadbase:3.3.76.5.05141'
 //
-//    // 米盟适配器，可选。仅支持AndroidX版本
-//    implementation 'cn.admobiletop.adsuyi.ad.adapter:mimo-androidx:5.3.3.12103'
-//    implementation 'com.google.code.gson:gson:2.8.5'
-//    implementation 'com.github.bumptech.glide:glide:4.9.0'
-//    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
-//
 //    // 华为适配器，可选
 //    implementation 'cn.admobiletop.adsuyi.ad.adapter:hwpps:13.4.76.300.01031'
 //
