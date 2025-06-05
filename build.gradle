@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        maven{ url'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url "https://maven.admobile.top/repository/maven-releases/" }
+        // 如果添加了华为联盟广告，需要添加华为联盟的远程仓库依赖
+        maven { url 'https://developer.huawei.com/repo/' }
+        // 如果添加了gromore广告，需要添加gromore的远程仓库依赖
+        maven { url "https://artifact.bytedance.com/repository/pangle" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

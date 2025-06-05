@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageColorPrimary"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_marginTop="250dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="其他页面"
+            android:textColor="#6e6e6e"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnFinish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/shape_background_button_selector"
+            android:stateListAnimator="@null"
+            android:text="返回上一级"
+            android:textColor="@color/textColorBlack" />
+    </LinearLayout>
+
+</FrameLayout>

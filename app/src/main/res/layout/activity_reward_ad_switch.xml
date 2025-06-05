@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+
+
+    <Button
+        android:id="@+id/btnLoadAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载激励（dl或rewardvod）广告" />
+
+    <Button
+        android:id="@+id/btnShowAd"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="展示激励（dl或rewardvod）广告" />
+</LinearLayout>

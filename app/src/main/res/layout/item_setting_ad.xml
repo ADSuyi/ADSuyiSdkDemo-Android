@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlAdContainer"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:textColor="#000"
+        android:textSize="16sp"
+        tools:text="开屏广告" />
+
+    <ImageView
+        android:id="@+id/ivRightChevron"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/ic_chevron_right_black_24dp" />
+
+    <TextView
+        android:id="@+id/tvPlatform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/ivRightChevron"
+        android:visibility="invisible"
+        tools:text="默认所有" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#e0e0e0" />
+
+</RelativeLayout>

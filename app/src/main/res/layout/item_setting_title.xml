@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlAdContainer"
+    android:layout_width="match_parent"
+    android:background="@color/pageColorPrimary"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="广告位设置"
+        android:textColor="#1e1e1e"
+        android:textSize="18sp" />
+
+</RelativeLayout>

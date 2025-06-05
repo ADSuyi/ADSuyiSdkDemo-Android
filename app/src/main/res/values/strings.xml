@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">ADmobile 广告聚合SDK Demo</string>
+    <string name="splash_ad">开屏广告</string>
+    <string name="splash_v_plus_ad">V+开屏广告</string>
+    <string name="splash_ad_load_show">加载展示分离</string>
+    <string name="banner_ad">横幅广告</string>
+    <string name="native_ad">信息流广告</string>
+    <string name="reward_vod_ad">激励视频广告</string>
+    <string name="full_screen_vod_ad">全屏视频广告</string>
+    <string name="interstitial_ad">插屏广告</string>
+    <string name="draw_vod_ad">沉浸视频广告</string>
+    <string name="fragment_examples">Fragment示例</string>
+    <string name="interstitial_auto_close_ad">插屏自动关闭</string>
+    <string name="content_alliance">内容联盟</string>
+    <string name="reward_ad_switch">组合广告异常切换示例</string>
+    <string name="reward_ad_">Dl激励广告</string>
+    <string name="native_express">信息流模板广告</string>
+    <string name="native_self_render">信息流自渲染广告</string>
+
+    <string name="content_recipe">菜谱</string>
+    <string name="content_recipe_entry">菜谱入口</string>
+    <string name="content_recipe_tab">菜谱Tab</string>
+
+    <string name="content_novel">小说</string>
+    <string name="content_novel_entry">小说入口</string>
+    <string name="content_novel_tab">小说Tab</string>
+
+    <string name="define">确定</string>
+    <string name="setting">设置</string>
+    <string name="web">Web</string>
+    <string name="content_module">内容组件</string>
+
+    <string name="privacy_policy">\t\t\t\t亲爱的开发者，非常感谢您选择并选用ADmobile 广告聚合SaaS服务！\n\n
+\t\t\t\t为了保证您的App顺利通过合规检测，本提示将向你演示ADSuyiSdk初始化合规方案。\n
+\t\t\t\t1. APP首次运行时请通过弹窗等明显方式提示用户阅读《用户协议》、《隐私政策》和《第三方SDK使用列表》，用户确认同意《用户协议》、《隐私政策》和《第三方SDK使用列表》后，再启用SDK进行个人信息的收集与处理。\n
+\t\t\t\t2. 本提示的内容及《用户协议》、《隐私政策》和《第三方SDK使用列表》需根据你的APP业务需求进行编写，可参考《网络安全标准实践指南—移动互联网应用程序（App）收集使用个人信息自评估指南》或咨询对接人员。\n\n
+\t\t\t\t你可以通过阅读完整版的ADmobile 《用户协议》、《隐私政策》和《第三方SDK使用列表》了解ADmobile详细隐私策略。
+    </string>
+
+    <string name="interstitial_auto_close_attention">注意:\n1.本操作非正常广告展示流程，如遇渠道数据核减、冻结、判作弊等需自行承担后果;\n2.该功能非sdk功能，仅demo演示，如果有需要可参考demo中的代码按需求开发；\n3.自动关闭倒计时最好大于5秒，避免曝光异常影响收益；\n4.目前支持优量汇、穿山甲、快手、天目渠道，渠道陆续增加中;\n5.目前仅支持插屏半屏（头条渠道支持半屏和全屏）;\n6.本代码所使用的第三方sdk为suyi文档上的最新版本，如果用非文档上的版本可能导致自动关闭功能失效；</string>
+
+
+    <string-array name="ad_type_items">
+        <item>开屏广告</item>
+        <item>Banner广告</item>
+        <item>信息流广告</item>
+        <item>激励视频广告</item>
+        <item>插屏广告</item>
+    </string-array>
+    <string-array name="platforms">
+        <item>所有(null或空字符串)</item>
+        <!--天目-->
+        <item>tianmu</item>
+        <!--优量汇/广点通-->
+        <item>gdt</item>
+        <!--穿山甲/头条-->
+        <item>toutiao</item>
+        <!--百度/百青藤-->
+        <item>baidu</item>
+        <!--快手-->
+        <item>ksad</item>
+    </string-array>
+
+    <string-array name="platforms_zh">
+        <item>所有(null或空字符串)</item>
+        <item>天目(tianmu)</item>
+        <item>优量汇/广点通(gdt)</item>
+        <item>穿山甲/头条(toutiao)</item>
+        <item>百度/百青藤(baidu)</item>
+        <item>快手(ksad)</item>
+    </string-array>
+
+    <string-array name="ad_count">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="native_ad_list">
+        <item>自渲染</item>
+        <item>模板自渲染混合</item>
+<!--        <item>优量汇模板2.0渲染</item>-->
+        <item>模板</item>
+    </string-array>
+</resources>

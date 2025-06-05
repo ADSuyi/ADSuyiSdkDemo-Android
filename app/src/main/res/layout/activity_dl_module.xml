@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pageColorPrimary"
+    tools:context=".activity.other.DlModuleActivity">
+
+    <Button
+        android:id="@+id/btnDlNormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:text="组合广告正常路径展示"
+        android:textColor="@color/textColorBlack" />
+
+    <Button
+        android:id="@+id/btnDlSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:text="组合广告异常切换示例"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorBlack" />
+
+</LinearLayout>

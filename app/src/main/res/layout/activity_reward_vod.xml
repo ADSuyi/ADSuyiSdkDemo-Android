@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageColorPrimary"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <Button
+        android:layout_marginTop="120dp"
+        android:id="@+id/btnLoadAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:text="加载激励视频广告"
+        android:textColor="@color/textColorBlack" />
+
+    <Button
+        android:id="@+id/btnShowAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:text="展示激励视频广告"
+        android:textColor="@color/textColorBlack" />
+</LinearLayout>

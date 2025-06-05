@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btnLoadAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="加载广告"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnShowAd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="展示广告"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/flContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/rlLogoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/flContainer"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/admobile_icon" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳过"
+        android:textColor="#000000"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_background_circle"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:alpha="0"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp" />
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+{
+  "supplier":{
+    "vivo":{
+      "appid":"替换成自己vivo市场的appid，目前暂时可以只配置vivo平台的appid，没有可不设置"
+    },
+    "xiaomi":{
+    },
+    "huawei":{
+    },
+    "oppo":{
+    }
+  }
+}

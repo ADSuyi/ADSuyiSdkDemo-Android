@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageColorPrimary"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btnLoadAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:text="获取组合广告"
+        android:textColor="@color/textColorBlack" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="16dp"
+        android:background="#f0f0f0"
+        android:paddingLeft="12dp"
+        android:paddingTop="18dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="18dp"
+        android:textColor="#747474"
+        android:textSize="14sp" />
+
+</LinearLayout>

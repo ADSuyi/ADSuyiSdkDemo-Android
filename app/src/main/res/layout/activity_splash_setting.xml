@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="展示样式："
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgDisplayStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/rbHalf"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="半屏"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rbFullScreen"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="全屏"/>
+
+        <RadioButton
+            android:id="@+id/rbImmersiveAndFullScreen"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="全屏状态栏沉浸"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/llHalfEnterLogoHeightSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="底部LOGO高度"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/etLogoHeight"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:text="300"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="px"
+            android:textSize="16sp"
+            android:textColor="#000000"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载方式："
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgLoadType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/loadAndShow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="加载并展示"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/loadOnly"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="仅加载"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnLoadSplashAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开屏广告"/>
+
+</LinearLayout>

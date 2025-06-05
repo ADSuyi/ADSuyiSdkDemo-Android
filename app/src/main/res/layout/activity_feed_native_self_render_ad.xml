@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pageColorPrimary">
+
+    <Button
+        android:id="@+id/btnLoadAndShowAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载并展示广告"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <Button
+        android:id="@+id/btnLoadAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载广告"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <Button
+        android:id="@+id/btnShowAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="展示广告"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <FrameLayout
+        android:id="@+id/nativeAdContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rlAdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.5dp"
+            android:background="#ffffff"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/flImageMediaContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee">
+
+                <FrameLayout
+                    android:id="@+id/flContent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintDimensionRatio="16:9"
+                    android:scaleType="centerCrop" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_close"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignRight="@id/flImageMediaContainer"
+                android:layout_alignTop="@+id/flImageMediaContainer"/>
+
+            <ImageView
+                android:id="@+id/ivAdTarget"
+                android:layout_width="36dp"
+                android:layout_height="14dp"
+                android:layout_alignRight="@id/flImageMediaContainer"
+                android:layout_alignBottom="@+id/flImageMediaContainer"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flImageMediaContainer"
+                android:layout_marginTop="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:text="广告标题"/>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTitle"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:text="广告内容"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

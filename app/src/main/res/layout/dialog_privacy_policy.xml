@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingTop="24dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="温馨提示"
+            android:textColor="#ff292929"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:textSize="12sp"
+            android:textColor="#aaaaaa"
+            android:text="(以下文案仅为示例文案)"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="3dp"
+                android:text="@string/privacy_policy"
+                android:textColor="#5c5c5c"
+                android:textSize="14sp" />
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnDisagree"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_f2f2f2_4dp"
+                android:text="不同意"
+                android:textColor="#a8a8a8"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnAgree"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_marginLeft="24dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_fff2e0_4dp"
+                android:text="同意"
+                android:textColor="#feb34d"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

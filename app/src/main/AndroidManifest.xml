@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="cn.admobiletop.adsuyidemo">
+
+    <!-- 广告必须的权限，AAR中已经内置 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 如果有视频相关的广告播放请务必添加-->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-sdk
+        tools:overrideLibrary="com.bytedance.gromore"/>
+
+    <application
+        android:name=".ADSuyiApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/admobile_icon"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/adsuyi_network_security_config"
+        android:roundIcon="@mipmap/admobile_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:networkSecurityConfig,android:theme,android:allowBackup">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".activity.ad.PrivacyActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.ad.ADSuyiInitAndLoadSplashAdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/splash"
+            android:exported="false">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".activity.ad.splash.SplashAdLoadShowSeparationActivity"
+            android:theme="@style/splash"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <activity
+            android:name=".activity.ad.BannerAdActivity"
+            android:label="@string/banner_ad"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ad.RewardVodAdActivity"
+            android:label="@string/reward_vod_ad"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.ad.FullScreenVodAdActivity"
+            android:label="@string/full_screen_vod_ad"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.ad.interstitial.InterstitialAdActivity"
+            android:label="@string/interstitial_ad"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.setting.PositionSettingActivity"
+            android:label="@string/setting"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.other.NormalWebActivity"
+            android:label="@string/web"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.setting.SettingActivity"
+            android:label="@string/setting"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity android:name=".activity.ad.feed.NativeExpressActivity"
+            android:label="@string/native_express"
+            android:exported="false"/>
+
+        <activity android:name=".activity.ad.feed.NativeExpressListActivity"
+            android:label="@string/native_express"
+            android:exported="false"/>
+
+        <activity android:name=".activity.ad.feed.NativeSelfRenderActivity"
+            android:label="@string/native_self_render"
+            android:exported="false"/>
+
+        <activity android:name=".activity.ad.feed.NativeSelfRenderListActivity"
+            android:label="@string/native_self_render"
+            android:exported="false"/>
+
+        <activity android:name=".activity.ad.splash.SplashAdSettingActivity"
+            android:label="@string/splash_ad"
+            android:screenOrientation="portrait"
+            android:exported="false"/>
+
+        <activity android:name=".activity.ad.splash.SplashAdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/splash"
+            android:exported="false"/>
+
+        <activity
+            android:name=".activity.ad.DrawVodActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/draw_vod_ad"
+            android:screenOrientation="portrait"
+            android:theme="@style/noActionBar"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>

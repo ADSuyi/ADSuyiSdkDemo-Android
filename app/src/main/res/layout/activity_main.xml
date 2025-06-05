@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageColorPrimary">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:title="@string/app_name"
+        app:titleTextColor="#ffffff"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolBar"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnSplashAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/splash_ad"
+                    android:layout_marginTop="20dp"/>
+
+                <Button
+                    android:id="@+id/btnBannerAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/banner_ad"
+                    android:textColor="@color/textColorBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnNativeExpressLayout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_background_button_selector"
+                        android:stateListAnimator="@null"
+                        android:text="信息流模板"
+                        android:layout_marginRight="16dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColorBlack" />
+
+                    <Button
+                        android:id="@+id/btnNativeSelfRenderLayout"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_background_button_selector"
+                        android:stateListAnimator="@null"
+                        android:text="信息流自渲染"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColorBlack" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnNativeExpressList"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_background_button_selector"
+                        android:stateListAnimator="@null"
+                        android:text="信息流模板列表"
+                        android:layout_marginRight="16dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColorBlack" />
+
+                    <Button
+                        android:id="@+id/btnNativeSelfRenderList"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_background_button_selector"
+                        android:stateListAnimator="@null"
+                        android:text="信息流自渲染列表"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textColorBlack" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnInterstitialAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/interstitial_ad"
+                    android:textColor="@color/textColorBlack" />
+
+                <Button
+                    android:id="@+id/btnRewardVodAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/reward_vod_ad"
+                    android:textColor="@color/textColorBlack" />
+
+                <Button
+                    android:id="@+id/btnFullScreenAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/full_screen_vod_ad"
+                    android:textColor="@color/textColorBlack" />
+
+                <Button
+                    android:id="@+id/btnDrawVodAd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_background_button_selector"
+                    android:stateListAnimator="@null"
+                    android:text="@string/draw_vod_ad"
+                    android:textColor="@color/textColorBlack" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp"
+                android:padding="15dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <Switch
+                    android:id="@+id/switchPersonalized"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个性化开关" />
+
+                <Switch
+                    android:id="@+id/switchCgq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="禁用传感器" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

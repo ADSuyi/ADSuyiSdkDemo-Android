@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pageColorPrimary">
+
+    <Button
+        android:id="@+id/btnLoadAndShowAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载并展示广告"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <Button
+        android:id="@+id/btnLoadAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="加载广告"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <Button
+        android:id="@+id/btnShowAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="展示广告"
+        android:background="@drawable/shape_background_button_selector"
+        android:stateListAnimator="@null"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_margin="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlExpressAd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
