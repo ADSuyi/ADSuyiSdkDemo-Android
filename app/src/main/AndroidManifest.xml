@@ -85,12 +85,6 @@
             android:exported="false"/>
 
         <activity
-            android:name=".activity.ad.FullScreenVodAdActivity"
-            android:label="@string/full_screen_vod_ad"
-            android:screenOrientation="portrait"
-            android:exported="false"/>
-
-        <activity
             android:name=".activity.ad.interstitial.InterstitialAdActivity"
             android:label="@string/interstitial_ad"
             android:screenOrientation="portrait"
@@ -138,14 +132,6 @@
         <activity android:name=".activity.ad.splash.SplashAdActivity"
             android:screenOrientation="portrait"
             android:theme="@style/splash"
-            android:exported="false"/>
-
-        <activity
-            android:name=".activity.ad.DrawVodActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:label="@string/draw_vod_ad"
-            android:screenOrientation="portrait"
-            android:theme="@style/noActionBar"
             android:exported="false"/>
 
     </application>

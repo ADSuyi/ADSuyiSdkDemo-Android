@@ -17,8 +17,6 @@ import android.widget.Toast;
 import cn.admobiletop.adsuyi.ADSuyiSdk;
 import cn.admobiletop.adsuyidemo.R;
 import cn.admobiletop.adsuyidemo.activity.ad.BannerAdActivity;
-import cn.admobiletop.adsuyidemo.activity.ad.DrawVodActivity;
-import cn.admobiletop.adsuyidemo.activity.ad.FullScreenVodAdActivity;
 import cn.admobiletop.adsuyidemo.activity.ad.feed.NativeExpressActivity;
 import cn.admobiletop.adsuyidemo.activity.ad.feed.NativeExpressListActivity;
 import cn.admobiletop.adsuyidemo.activity.ad.feed.NativeSelfRenderActivity;
@@ -50,9 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btnNativeExpressList).setOnClickListener(this);
         findViewById(R.id.btnNativeSelfRenderList).setOnClickListener(this);
         findViewById(R.id.btnRewardVodAd).setOnClickListener(this);
-        findViewById(R.id.btnFullScreenAd).setOnClickListener(this);
         findViewById(R.id.btnInterstitialAd).setOnClickListener(this);
-        findViewById(R.id.btnDrawVodAd).setOnClickListener(this);
 
 
         boolean issensor = SPUtil.getBoolean(MainActivity.this, "sensor");
@@ -107,12 +103,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnInterstitialAd:
                 startActivity(InterstitialAdActivity.class);
-                break;
-            case R.id.btnDrawVodAd:
-                startActivity(DrawVodActivity.class);
-                break;
-            case R.id.btnFullScreenAd:
-                startActivity(FullScreenVodAdActivity.class);
                 break;
             default:
                 break;

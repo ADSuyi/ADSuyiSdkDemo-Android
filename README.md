@@ -104,19 +104,9 @@ Suyi聚合广告SDK 主要由**ADSuyi核心SDK（简称ADSuyiSdk）**和一个�
     <td>常出现在游戏的复活、任务等位置，或者网服类APP的一些增值服务场景</td>
   </tr>
   <tr>
-    <td><a href="#ad_full_screen_vod">全屏视频广告</a></td>
-    <td>类似激励视频，与激励视频不同的是，全屏视频广告在观看一定时长后即可跳过广告，无需全部观看完成，有视频跳过回调，但是没有激励回调</td>
-    <td>常出现在游戏的复活、任务等位置，或者网服类APP的一些增值服务场景</td>
-  </tr>
-  <tr>
     <td><a href="#ad_interstitial">插屏广告</a></td>
     <td>插屏广告是移动广告的一种常见形式，在应用流程中弹出，当应用展示插屏广告时，用户可以选择点击广告，访问其目标网址，也可以将其关闭并返回应用</td>
     <td>在应用执行流程的自然停顿点，适合投放这类广告</td>
-  </tr>
-  <tr>
-    <td><a href="#ad_draw_vod">Draw视频广告</a></td>
-    <td>类似小视频一样的视频广告</td>
-    <td>类似小视频列表的场景</td>
   </tr>
 </table>
 
@@ -249,7 +239,7 @@ dependencies {
 
 >  **如对接华为广告联盟，激励视频要提前预加载，并且播放完成后需要预加载下一个激励视频，华为渠道点击事件无法统计；横幅广告使用场景是程序页面的顶部或者底部。**
 
-2. 激励、全屏视频、插屏等广告对象一次成功拉取的广告数据只允许展示一次，还需展示请再次加载广告。
+2. 激励、插屏等广告对象一次成功拉取的广告数据只允许展示一次，还需展示请再次加载广告。
 
 3. 关于项目使用autosize后出现广告样式出现异常问题处理方案，请参考master-screen-adapter分支中的BannerActivity，并将适配单位改为pt。
 
@@ -1270,131 +1260,11 @@ public void onAdFailed(ADSuyiError error) {
 >
 
 
-### <a name="ad_full_screen_vod">6.6 全屏视频广告示例</a>
-
-全屏视频广告是类似激励视频样式的广告形式，与激励视频不同之处在于全屏视频广告播放一定时间时间后即可跳过，同时全屏视频广告拥有跳过回调不具备奖励回调。
-
-#### 6.6.1 全屏视频广告主要 API
-
-**ADSuyiFullScreenVodAd**
-
-cn.admobiletop.adsuyi.ad.ADSuyiFullScreenVodAd
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| ADSuyiFullScreenVodAd(Activity activity) | 构造方法。参数说明：activity（当前页面activity对象）。|
-| ADSuyiFullScreenVodAd(Fragment fragment) | 构造方法。参数说明：fragment（当前页面fragment对象）。|
-| setOnlySupportPlatform(String platform) | 设置广告定向，仅请求某一渠道。参数说明：platform（<a href="#platform_name">渠道名</a>）。注：仅debug模式为true时生效。|
-| setListener(ADSuyiFullScreenVodAdListener listener) | 设置广告相关状态。参数说明：listener（广告状态监听器）。|
-| setSceneId(String sceneId) | 设置广告场景id，用于区分同一个广告位在不同场景下使用的数据。参数说明：sceneId（场景ID）。|
-| loadAd(String posId) | 请求广告并展示。参数说明：posId（广告位ID）。|
-| release() | 释放广告。|
-
-**ADSuyiExtraParams**
-
-cn.admobiletop.adsuyi.ad.entity.ADSuyiExtraParams
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| ADSuyiExtraParams.Builder().build() | 构造方法。|
-| setVideoWithMute(boolean isMute) | 视频静音设置。参数说明：isMute（true：静音、false：不静音，默认：true）。|
-| setAdShakeDisable(boolean adShakeDisable) | 设置传感器禁用。参数说明：adShakeDisable（true：禁用、false：可用，默认：false）。|
-
-**ADSuyiFullScreenVodAdListener**
-
-cn.admobiletop.adsuyi.ad.listener.ADSuyiFullScreenVodAdListener
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| onAdReceive(ADSuyiFullScreenVodAdInfo adInfo) | 广告加载成功回调。|
-| onAdExpose(ADSuyiFullScreenVodAdInfo adInfo) | 广告曝光回调。|
-| onAdClick(ADSuyiFullScreenVodAdInfo adInfo) | 广告点击回调。|
-| onAdClose(ADSuyiFullScreenVodAdInfo adInfo) | 广告关闭回调。|
-| onVideoCache(ADSuyiFullScreenVodAdInfo adInfo) | 广告缓存成功回调。部分渠道不会回调该方法，请在onAdReceive做广告展示处理|
-| onVideoComplete(ADSuyiFullScreenVodAdInfo adInfo) | 广告播放完毕回调。|
-| onVideoError(ADSuyiFullScreenVodAdInfo adInfo, ADSuyiError error) | 视频播放错误回调。|
-| onAdFailed(ADSuyiError error) | 广告获取失败回调。|
-
-**ADSuyiFullScreenVodAdInfo**
-
-cn.admobiletop.adsuyi.ad.data.ADSuyiFullScreenVodAdInfo
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| showFullScreenVod(Activity activity) | 展示广告。参数说明：activity（当前页面activity对象）。|
-| getPlatform() | 获取三方广告平台名称，返回String类型。|
-| getECPM() | 获取ECPM，返回Double类型（单位：元）。|
-| getEcpmPrecision() | ECPM类型，返回String类型（accurate：精准、platform_assignment：平台指定、estimate：估算）。|
-
-#### 6.6.2 全屏视频广告加载并展示
-
-```java
-ADSuyiFullScreenVodAd fullScreenVodAd = new ADSuyiFullScreenVodAd(this);
-
-// 设置全屏视频监听
-        fullScreenVodAd.setListener(new ADSuyiFullScreenVodAdListener() {
-
-@Override
-public void onAdReceive(ADSuyiFullScreenVodAdInfo adInfo) {
-        // 广告获取成功回调...
-        // 全屏视频广告对象一次成功拉取的广告数据只允许展示一次
-        // 广告展示
-        adInfo.showFullScreenVod(Activity activity);
-        }
-
-@Override
-public void onVideoCache(ADSuyiFullScreenVodAdInfo adInfo) {
-        // 部分渠道不会回调该方法，请在onAdReceive做广告展示处理
-        // 广告视频缓存成功回调...
-        }
-
-@Override
-public void onVideoComplete(ADSuyiFullScreenVodAdInfo adInfo) {
-        // 广告观看完成回调...
-        }
-
-@Override
-public void onVideoError(ADSuyiFullScreenVodAdInfo adInfo, ADSuyiError adSuyiError) {
-        // 广告播放错误回调...
-        }
-
-@Override
-public void onAdExpose(ADSuyiFullScreenVodAdInfo adInfo) {
-        // 广告展示回调，有展示回调不一定是有效曝光，如网络等情况导致上报失败
-        }
-
-@Override
-public void onAdClick(ADSuyiFullScreenVodAdInfo adInfo) {
-        // 广告点击回调，有点击回调不一定是有效点击，如网络等情况导致上报失败
-        }
-
-@Override
-public void onAdClose(ADSuyiFullScreenVodAdInfo adInfo) {
-        // 广告点击关闭回调
-        }
-
-@Override
-public void onAdFailed(ADSuyiError error) {
-        // 广告获取失败回调...
-        }
-        });
-
-// 加载全屏视频广告
-        fullScreenVodAd.loadAd(String posId);
-```
-
-<p style="color:red;">注意广告对象的获取是异步的，请在onAdReceive回调后展示广告 </p>
-
-
-> 全屏视频广告示例详情 [Gitee地址](https://gitee.com/admobile/ADSuyiSdkDemo-Android/blob/master/app/src/main/java/cn/admobiletop/adsuyidemo/activity/ad/FullScreenVodAdActivity.java)、[Github地址](https://github.com/ADSuyi/ADSuyiSdkDemo-Android/blob/master/app/src/main/java/cn/admobiletop/adsuyidemo/activity/ad/FullScreenVodAdActivity.java)
->
-
-
-### <a name="ad_interstitial">6.7 插屏广告示例</a>
+### <a name="ad_interstitial">6.6 插屏广告示例</a>
 
 插屏广告是移动广告的一种常见形式，在应用流程中弹出，当应用展示插屏广告时，用户可以选择点击广告，也可以将其关闭并返回应用。
 
-#### 6.7.1 插屏广告主要 API
+#### 6.6.1 插屏广告主要 API
 
 **ADSuyiInterstitialAd**
 
@@ -1445,7 +1315,7 @@ cn.admobiletop.adsuyi.ad.data.ADSuyiInterstitialAdInfo
 | getECPM() | 获取ECPM，返回Double类型（单位：元）。|
 | getEcpmPrecision() | ECPM类型，返回String类型（accurate：精准、platform_assignment：平台指定、estimate：估算）。|
 
-#### 6.7.2 插屏广告加载并展示
+#### 6.6.2 插屏广告加载并展示
 
 ```java
 ADSuyiInterstitialAd interstitialAd = new ADSuyiInterstitialAd(Activity activity);
@@ -1497,143 +1367,7 @@ public void onAdFailed(ADSuyiError error) {
 > 插屏广告示例详情[Gitee地址](https://gitee.com/admobile/ADSuyiSdkDemo-Android/blob/master/app/src/main/java/cn/admobiletop/adsuyidemo/activity/ad/interstitial/InterstitialAdActivity.java)、[Github地址](https://github.com/ADSuyi/ADSuyiSdkDemo-Android/blob/master/app/src/main/java/cn/admobiletop/adsuyidemo/activity/ad/interstitial/InterstitialAdActivity.java)
 >
 
-
-### <a name="ad_draw_vod">6.8 DrawVod广告示例</a>
-
-类似抖音、快手小视频一样的沉浸式视频广告类型
-
-#### 6.8.1 DrawVod广告主要 API
-
-**ADSuyiDrawVodAd**
-
-cn.admobiletop.adsuyi.ad.ADSuyiDrawVodAd
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| ADSuyiDrawVodAd(Activity activity) | 构造方法。参数说明：activity（当前页面activity对象）。|
-| ADSuyiDrawVodAd(Fragment fragment) | 构造方法。参数说明：fragment（当前页面fragment对象）。|
-| setLocalExtraParams(ADSuyiExtraParams extraParams) | 设置额外参数。参数说明：extraParams（广告额外参数）。|
-| setOnlySupportPlatform(String platform) | 设置广告定向，仅请求某一渠道。参数说明：platform（<a href="#platform_name">渠道名</a>）。注：仅debug模式为true时生效。|
-| setListener(ADSuyiDrawVodAdListener listener) | 设置广告相关状态。参数说明：listener（广告状态监听器）。|
-| setVideoListener(ADSuyiDrawVodVideoListener listener) | 设置广告视频相关状态。参数说明：listener（广告状态监听器）。|
-| loadAd(String posId) | 请求广告并展示。参数说明：posId（广告位ID）。|
-| release() | 释放广告。|
-
-**ADSuyiExtraParams**
-
-cn.admobiletop.adsuyi.ad.entity.ADSuyiExtraParams
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| ADSuyiExtraParams.Builder().build() | 构造方法。|
-| adSize(ADSuyiAdSize adSize) | 设置开屏视图宽高。参数说明：adSize（设置整个广告视图预期宽高）。|
-| setAdShakeDisable(boolean adShakeDisable) | 设置传感器禁用。参数说明：adShakeDisable（true：禁用、false：可用，默认：false）。|
-
-
-**ADSuyiAdSize**
-
-cn.admobiletop.adsuyi.ad.entity.ADSuyiAdSize
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| ADSuyiAdSize(int width, int height) | 构造方法。参数说明：<br>width（容器宽度，单位：px）请传入实际宽度、<br>height（容器高度，单位：px）请传入实际高度。|
-
-
-**ADSuyiDrawVodAdListener**
-
-cn.admobiletop.adsuyi.ad.listener.ADSuyiDrawVodAdListener
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| onAdReceive(List\<ADSuyiDrawVodAdInfo> adInfoList) | 广告加载成功回调。|
-| onAdExpose(ADSuyiDrawVodAdInfo adInfo) | 广告展示回调。|
-| onAdClick(ADSuyiDrawVodAdInfo adInfo) | 广告点击回调。|
-| onAdClose(ADSuyiDrawVodAdInfo adInfo) | 广告关闭回调。|
-| onRenderFailed(ADSuyiDrawVodAdInfo adInfo, ADSuyiError error) | 广告渲染失败回调。|
-| onAdFailed(ADSuyiError error) | 广告失败回调。参数说明：error（广告错误信息）。|
-
-**ADSuyiDrawVodVideoListener**
-
-cn.admobiletop.adsuyi.ad.listener.ADSuyiDrawVodVideoListener
-
-| 方法名         | 介绍 |
-| ------------ | ---- |
-| onVideoLoad(ADSuyiNativeAdInfo nativeAdInfo) | 视频加载中回调。|
-| onVideoStart(ADSuyiNativeAdInfo nativeAdInfo) | 视频播放回调。|
-| onVideoPause(ADSuyiNativeAdInfo nativeAdInfo) | 视频暂停回调。|
-| onVideoComplete(ADSuyiNativeAdInfo nativeAdInfo) | 视频播放完毕回调。|
-| onVideoError(ADSuyiNativeAdInfo nativeAdInfo) | 视频异常回调。|
-
-#### 6.8.2 DrawVod广告加载并展示
-
-```java
-ADSuyiDrawVodAd drawVodAd = new ADSuyiDrawVodAd(Activity activity);
-        int width = getResources().getDisplayMetrics().widthPixels;
-        int height = width * 16 / 9;
-
-// 创建额外参数实例
-        ADSuyiExtraParams extraParams = new ADSuyiExtraParams.Builder()
-        // 设置广告预期宽高，单位为px，宽高均不能小于等于0
-        .adSize(new ADSuyiAdSize(width, height))
-        .build();
-// 设置一些额外参数
-        drawVodAd.setLocalExtraParams(extraParams);
-
-// 设置DrawVod广告监听
-        drawVodAd.setListener(new ADSuyiDrawVodAdListener() {
-@Override
-public void onRenderFailed(ADSuyiDrawVodAdInfo adInfo, ADSuyiError error) {
-        // 广告渲染失败，可在此处移除广告视图
-        }
-
-@Override
-public void onAdReceive(List\<ADSuyiDrawVodAdInfo\> adInfoList) {
-        // 广告加载成功回调
-        }
-
-@Override
-public void onAdExpose(ADSuyiDrawVodAdInfo adInfo) {
-        // 广告展示回调
-        }
-
-@Override
-public void onAdClick(ADSuyiDrawVodAdInfo adInfo) {
-        // 广告点击回调
-        }
-
-@Override
-public void onAdClose(ADSuyiDrawVodAdInfo adInfo) {
-        // 广告关闭回调
-        }
-
-@Override
-public void onAdFailed(ADSuyiError error) {
-        // 广告失败回调
-        }
-        );
-
-// 请求广告数据，参数一广告位ID，参数二请求数量[1,3]
-        drawVodAd.loadAd(String posId, int count);
-```
-
-```java
-// 判断广告Info对象是否被释放（调用过ADSuyiDrawVodAd的release()或ADSuyiDrawVodAdInfo的release()会释放广告Info对象）
-// 释放后的广告Info对象不能再次使用
-if (!ADSuyiAdUtil.adInfoIsRelease(drawVodAdInfo)) {
-        // 当前是Draw视频信息流模板广告，getMediaView获取的是模板广告视图
-        View mediaView = drawVodAdInfo.getMediaView(rlAdContainer);
-        // 将广告视图添加到容器中的便捷方法
-        ADSuyiViewUtil.addAdViewToAdContainer(rlAdContainer, mediaView);
-        // 注册或者渲染广告视图, 必须调用
-        drawVodAdInfo.render(rlAdContainer);
-        }
-```
-
-> DrawVod广告示例详情[Gitee地址](https://gitee.com/admobile/ADSuyiSdkDemo-Android/blob/master/app/src/main/java/cn/admobiletop/adsuyidemo/activity/ad/DrawVodActivity.java)、[Github地址](https://github.com/ADSuyi/ADSuyiSdkDemo-Android/blob/master/app/src/main/java/cn/admobiletop/adsuyidemo/activity/ad/DrawVodActivity.java)
->
-
-
-### 6.9 备注
+### 6.7 备注
 
 具体的接入代码和流程，请参考Demo
 
