@@ -1,4 +1,4 @@
-# Suyi聚合广告SDK ——接入文档 V4.0.0.05061
+# Suyi聚合广告SDK ——接入文档 V4.0.0.05062
 
 # Suyi聚合广告SDK  介绍
 
@@ -56,7 +56,7 @@ Suyi聚合广告SDK 主要由**ADSuyi核心SDK（简称ADSuyiSdk）**和一个�
 
 | Name         | 大小   | 版本号         |
 | ------------ | ----  | ------------- |
-| ADSuyi基础包  | 0.43M | V4.0.0.05061  |
+| ADSuyi基础包  | 0.43M | V4.0.0.05062  |
 | OAID         | 1.10M | V1.0.25       |
 | OAID适配器    | 0.01M | V1.0.25.12122 |
 
@@ -188,7 +188,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
 
     // ADSuyiSdk核心库必须导入
-    implementation 'cn.admobiletop.adsuyi.ad:core:4.0.0.05061'
+    implementation 'cn.admobiletop.adsuyi.ad:core:4.0.0.05062'
 
     // OAID1.0.25版本
     implementation(name: 'oaid_sdk_1.0.25', ext: 'aar')
